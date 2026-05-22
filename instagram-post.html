@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muzaffer Ozak Instagram Carousel - Download Slides</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Brandbook Color Tokens */
+    :root {
+      --bg: #ffffff;
+      --bg-elev: #ffffff;
+      --bg-soft: #fafafa;
+      --text: #0a0a0a;
+      --text-muted: #737373;
+      --text-faint: #a8a8a8;
+      --border: #dbdbdb;
+      --border-soft: #efefef;
+      --accent: #0095f6;
+      --accent-hover: #1877f2;
+      --danger: #ed4956;
+      --story-grad: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      --shadow: 0 1px 2px rgba(0,0,0,.04);
+      --radius: 8px;
+      
+      /* Custom colors for Muzaffer Ozak theme */
+      --gold: #d4af37;
+      --gold-light: #f4e4c1;
+      --navy: #0f3460;
+      --deep-navy: #1a1a2e;
+      --teal: #16a085;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --bg-elev: #0a0a0a;
+        --bg-soft: #121212;
+        --text: #fafafa;
+        --text-muted: #a8a8a8;
+        --text-faint: #737373;
+        --border: #262626;
+        --border-soft: #1c1c1c;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-soft);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .slides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .slide-wrapper {
+      position: relative;
+    }
+
+    .slide {
+      width: 100%;
+      aspect-ratio: 1080 / 1350;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .download-btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px 24px;
+      background: var(--accent);
+      border: none;
+      border-radius: var(--radius);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 149, 246, 0.3);
+    }
+
+    .download-all {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .download-all button {
+      padding: 18px 48px;
+      background: var(--story-grad);
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .download-all button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(240, 148, 51, 0.5);
+    }
+
+    /* Slide Designs */
+    .slide-1 {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--deep-navy) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .slide-1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .slide-1 .ornament-top,
+    .slide-1 .ornament-bottom {
+      width: 200px;
+      height: 60px;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      margin: 20px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-1 .ornament-top {
+      border-bottom: none;
+      margin-bottom: 40px;
+    }
+
+    .slide-1 .ornament-bottom {
+      border-top: none;
+      margin-top: 40px;
+    }
+
+    .slide-1 h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 30px;
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-1 .subtitle-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.8rem;
+      color: var(--gold-light);
+      font-weight: 400;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-1 .author {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem;
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-2,
+    .slide-3,
+    .slide-4,
+    .slide-5,
+    .slide-6 {
+      background: #fff;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      border: 1px solid var(--border-soft);
+    }
+
+    .slide-2::before,
+    .slide-3::before,
+    .slide-4::before,
+    .slide-5::before,
+    .slide-6::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      right: 40px;
+      bottom: 40px;
+      border: 2px solid var(--border);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    .slide-icon {
+      font-size: 4rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .slide-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 30px;
+      text-align: center;
+      line-height: 1.3;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-quote {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.7;
+      color: var(--text);
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    .slide-quote::before {
+      content: '"';
+      font-size: 5rem;
+      color: var(--border-soft);
+      position: absolute;
+      top: -30px;
+      left: 0;
+    }
+
+    .slide-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+
+    .slide-footer {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      text-align: center;
+      margin-top: auto;
+      letter-spacing: 1px;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-7 {
+      background: var(--story-grad);
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .slide-7 h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 30px;
+      line-height: 1.3;
+    }
+
+    .slide-7 .final-quote {
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+      line-height: 1.7;
+      color: #fff;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    .slide-7 .cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .slides-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .slide-1 h2 {
+        font-size: 2.5rem;
+      }
+
+      .slide-title {
+        font-size: 2rem;
+      }
+
+      .slide-quote {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wisdom of Sheikh Muzaffer Ozak</h1>
+    <p class="subtitle">Living in Harmony with Divine Rhythms</p>
+
+    <div class="slides-grid">
+      <!-- Slide 1: Title -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1" id="slide-1">
+          <div class="ornament-top"></div>
+          <h2>Love is<br/>the Wine</h2>
+          <p class="subtitle-text">Ancient Wisdom for Modern Living</p>
+          <p class="author">SHEIKH MUZAFFER OZAK</p>
+          <div class="ornament-bottom"></div>
+        </div>
+        <button class="download-btn" onclick="downloadSlide('slide-1', 'muzaffer_ozak_slide_1.png')">
+          Download Slide 1
+        </button>
+      </div>
+
+      <!-- Slide 2: Deep Hygiene & Purity -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2" id="slide-2">
+          <div class="slide-icon">✨</div>
+          <h3 class="slide-title">The Path of<br/>Purity</h3>
+          <p class="slide-quote">Love is to see what is good and beautiful in everything. It is to learn from everything.</p>
+          <p class="slide-text">Sufism emphasizes purification—not just of the body, but of the heart and soul. Deep cleanliness is a gateway to spiritual clarity.</p>
+          <p class="slide-footer">— Love is the Wine</p>
+        </div>
+        <button class="download-btn" onclick="downloadSlide('slide-2', 'muzaffer_ozak_slide_2.png')">
+          Download Slide 2
+        </button>
+      </div>
+
+      <!-- Slide 3: Circadian Rhythms -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3" id="slide-3">
+          <div class="slide-icon">🌙</div>
+          <h3 class="slide-title">Living by<br/>Divine Timing</h3>
+          <p class="slide-text">The spiritual masters understood what science now confirms: our bodies are designed to flow with natural rhythms. Prayer times align with the sun's journey—a map for harmonious living.</p>
+          <p class="slide-text" style="font-style: italic; color: var(--accent); margin-top: 30px; font-weight: 600;">"How many nights have you spent without sleep for the love of God?"</p>
+          <p class="slide-footer">— Sheikh Muzaffer Ozak</p>
+        </div>
+        <button class="download-btn" onclick="downloadSlide('slide-3', 'muzaffer_ozak_slide_3.png')">
+          Download Slide 3
+        </button>
+      </div>
+
+      <!-- Slide 4: Fresh Air & Sleep -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4" id="slide-4">
+          <div class="slide-icon">🍃</div>
+          <h3 class="slide-title">Breathe Divine<br/>Breath</h3>
+          <p class="slide-text">Fresh air and proper rest are not luxuries—they are essential practices for maintaining spiritual vitality. The body is a sacred vessel that must be honored.</p>
+          <p class="slide-text" style="margin-top: 30px; color: var(--text); font-style: italic;">Sleep under the stars, wake with the dawn, and breathe with intention.</p>
+          <p class="slide-footer">Sufi Wisdom</p>
+        </div>
+        <button class="download-btn" onclick="downloadSlide('slide-4', 'muzaffer_ozak_slide_4.png')">
+          Download Slide 4
+        </button>
+      </div>
+
+      <!-- Slide 5: Early Rising -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5" id="slide-5">
+          <div class="slide-icon">🌅</div>
+          <h3 class="slide-title">The Blessed<br/>Dawn Hours</h3>
+          <p class="slide-quote">When human beings remember God, angels are born.</p>
+          <p class="slide-text">Rising early aligns us with creation's first light. The dawn prayer (Fajr) is a time of immense blessing—when the veil between worlds is thinnest.</p>
+          <p class="slide-footer">— Love is the Wine</p>
+        </div>
+        <button class="download-btn" onclick="downloadSlide('slide-5', 'muzaffer_ozak_slide_5.png')">
+          Download Slide 5
+        </button>
+      </div>
+
+      <!-- Slide 6: Nervous Exhaustion -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6" id="slide-6">
+          <div class="slide-icon">🕊️</div>
+          <h3 class="slide-title">Healing the<br/>Weary Soul</h3>
+          <p class="slide-text">Nervous exhaustion comes from forgetting our divine nature. When we lose connection to Source, anxiety fills the void.</p>
+          <p class="slide-quote" style="font-size: 1.6rem; margin-top: 30px;">The remedy: prayer, remembrance, and surrender. Rest in the arms of the Beloved.</p>
+          <p class="slide-footer">Sufi Teaching</p>
+        </div>
+        <button class="download-btn" onclick="downloadSlide('slide-6', 'muzaffer_ozak_slide_6.png')">
+          Download Slide 6
+        </button>
+      </div>
+
+      <!-- Slide 7: Call to Action -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7" id="slide-7">
+          <h2>Walk the Path<br/>of Love</h2>
+          <p class="final-quote">"Love is the wine. By the hand of the wine pourer, the glass—the dervish—is filled."</p>
+          <p class="cta">✦ SHEIKH MUZAFFER OZAK ✦</p>
+          <p style="margin-top: 40px; font-size: 1.2rem; font-family: 'Inter', sans-serif; color: #fff; font-weight: 400;">
+            Follow for more spiritual wisdom<br/>from the masters
+          </p>
+        </div>
+        <button class="download-btn" onclick="downloadSlide('slide-7', 'muzaffer_ozak_slide_7.png')">
+          Download Slide 7
+        </button>
+      </div>
+    </div>
+
+    <div class="download-all">
+      <button onclick="downloadAllSlides()">Download All Slides as ZIP</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script>
+    async function downloadSlide(slideId, filename) {
+      const slide = document.getElementById(slideId);
+      const canvas = await html2canvas(slide, {
+        scale: 2,
+        backgroundColor: null,
+        width: 1080,
+        height: 1350,
+        useCORS: true
+      });
+
+      canvas.toBlob(function(blob) {
+        saveAs(blob, filename);
+      });
+    }
+
+    async function downloadAllSlides() {
+      const zip = new JSZip();
+      const slides = [
+        { id: 'slide-1', name: 'muzaffer_ozak_slide_1.png' },
+        { id: 'slide-2', name: 'muzaffer_ozak_slide_2.png' },
+        { id: 'slide-3', name: 'muzaffer_ozak_slide_3.png' },
+        { id: 'slide-4', name: 'muzaffer_ozak_slide_4.png' },
+        { id: 'slide-5', name: 'muzaffer_ozak_slide_5.png' },
+        { id: 'slide-6', name: 'muzaffer_ozak_slide_6.png' },
+        { id: 'slide-7', name: 'muzaffer_ozak_slide_7.png' }
+      ];
+
+      for (const slide of slides) {
+        const element = document.getElementById(slide.id);
+        const canvas = await html2canvas(element, {
+          scale: 2,
+          backgroundColor: null,
+          width: 1080,
+          height: 1350,
+          useCORS: true
+        });
+
+        const blob = await new Promise(resolve => canvas.toBlob(resolve));
+        zip.file(slide.name, blob);
+      }
+
+      const content = await zip.generateAsync({ type: 'blob' });
+      saveAs(content, 'muzaffer_ozak_instagram_slides.zip');
+    }
+  </script>
+</body>
+</html>
