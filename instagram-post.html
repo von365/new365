@@ -6,8 +6,46 @@
   <title>Muzaffer Ozak Instagram Carousel - Download Slides</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+    /* Brandbook Color Tokens */
+    :root {
+      --bg: #ffffff;
+      --bg-elev: #ffffff;
+      --bg-soft: #fafafa;
+      --text: #0a0a0a;
+      --text-muted: #737373;
+      --text-faint: #a8a8a8;
+      --border: #dbdbdb;
+      --border-soft: #efefef;
+      --accent: #0095f6;
+      --accent-hover: #1877f2;
+      --danger: #ed4956;
+      --story-grad: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      --shadow: 0 1px 2px rgba(0,0,0,.04);
+      --radius: 8px;
+      
+      /* Custom colors for Muzaffer Ozak theme */
+      --gold: #d4af37;
+      --gold-light: #f4e4c1;
+      --navy: #0f3460;
+      --deep-navy: #1a1a2e;
+      --teal: #16a085;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --bg-elev: #0a0a0a;
+        --bg-soft: #121212;
+        --text: #fafafa;
+        --text-muted: #a8a8a8;
+        --text-faint: #737373;
+        --border: #262626;
+        --border-soft: #1c1c1c;
+      }
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -15,11 +53,11 @@
     }
 
     body {
-      font-family: 'Cormorant Garamond', serif;
-      background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-soft);
       min-height: 100vh;
       padding: 40px 20px;
-      color: #fff;
+      color: var(--text);
     }
 
     .container {
@@ -28,22 +66,20 @@
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       text-align: center;
       font-size: 2.5rem;
+      font-weight: 700;
       margin-bottom: 1rem;
-      background: linear-gradient(135deg, #d4af37, #f4e4c1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--text);
     }
 
     .subtitle {
       text-align: center;
       font-size: 1.2rem;
       margin-bottom: 3rem;
-      color: #d4af37;
-      font-style: italic;
+      color: var(--text-muted);
+      font-weight: 400;
     }
 
     .slides-grid {
@@ -70,20 +106,21 @@
       margin-top: 15px;
       width: 100%;
       padding: 12px 24px;
-      background: linear-gradient(135deg, #d4af37, #c4941f);
+      background: var(--accent);
       border: none;
-      border-radius: 8px;
-      color: #1a1a2e;
-      font-family: 'Cinzel', serif;
+      border-radius: var(--radius);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     .download-btn:hover {
+      background: var(--accent-hover);
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+      box-shadow: 0 5px 15px rgba(0, 149, 246, 0.3);
     }
 
     .download-all {
@@ -93,11 +130,11 @@
 
     .download-all button {
       padding: 18px 48px;
-      background: linear-gradient(135deg, #16a085, #0e7a66);
+      background: var(--story-grad);
       border: none;
       border-radius: 12px;
       color: #fff;
-      font-family: 'Cinzel', serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 700;
       font-size: 1.2rem;
       cursor: pointer;
@@ -106,12 +143,12 @@
 
     .download-all button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(22, 160, 133, 0.5);
+      box-shadow: 0 8px 20px rgba(240, 148, 51, 0.5);
     }
 
     /* Slide Designs */
     .slide-1 {
-      background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--deep-navy) 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -138,7 +175,7 @@
     .slide-1 .ornament-bottom {
       width: 200px;
       height: 60px;
-      border: 3px solid #d4af37;
+      border: 3px solid var(--gold);
       border-radius: 50%;
       margin: 20px 0;
       position: relative;
@@ -156,10 +193,10 @@
     }
 
     .slide-1 h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 3.5rem;
       font-weight: 700;
-      color: #d4af37;
+      color: var(--gold);
       margin-bottom: 30px;
       line-height: 1.2;
       position: relative;
@@ -167,20 +204,21 @@
     }
 
     .slide-1 .subtitle-text {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.8rem;
-      color: #f4e4c1;
-      font-style: italic;
+      color: var(--gold-light);
+      font-weight: 400;
       margin-bottom: 30px;
       position: relative;
       z-index: 1;
     }
 
     .slide-1 .author {
-      font-family: 'Cinzel', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.4rem;
       color: #fff;
       letter-spacing: 2px;
+      font-weight: 600;
       position: relative;
       z-index: 1;
     }
@@ -190,12 +228,13 @@
     .slide-4,
     .slide-5,
     .slide-6 {
-      background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+      background: #fff;
       padding: 80px 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       position: relative;
+      border: 1px solid var(--border-soft);
     }
 
     .slide-2::before,
@@ -209,7 +248,7 @@
       left: 40px;
       right: 40px;
       bottom: 40px;
-      border: 2px solid rgba(212, 175, 55, 0.3);
+      border: 2px solid var(--border);
       border-radius: 20px;
       pointer-events: none;
     }
@@ -221,10 +260,10 @@
     }
 
     .slide-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 2.8rem;
       font-weight: 700;
-      color: #d4af37;
+      color: var(--text);
       margin-bottom: 30px;
       text-align: center;
       line-height: 1.3;
@@ -233,10 +272,10 @@
     }
 
     .slide-quote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.8rem;
       line-height: 1.7;
-      color: #f4e4c1;
+      color: var(--text);
       text-align: center;
       font-style: italic;
       margin-bottom: 40px;
@@ -248,17 +287,17 @@
     .slide-quote::before {
       content: '"';
       font-size: 5rem;
-      color: rgba(212, 175, 55, 0.3);
+      color: var(--border-soft);
       position: absolute;
       top: -30px;
       left: 0;
     }
 
     .slide-text {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.6rem;
       line-height: 1.8;
-      color: #e8e8e8;
+      color: var(--text-muted);
       text-align: center;
       position: relative;
       z-index: 1;
@@ -266,18 +305,19 @@
     }
 
     .slide-footer {
-      font-family: 'Cinzel', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.1rem;
-      color: #d4af37;
+      color: var(--accent);
       text-align: center;
       margin-top: auto;
       letter-spacing: 1px;
+      font-weight: 600;
       position: relative;
       z-index: 1;
     }
 
     .slide-7 {
-      background: linear-gradient(135deg, #d4af37 0%, #c4941f 100%);
+      background: var(--story-grad);
       padding: 80px 60px;
       display: flex;
       flex-direction: column;
@@ -287,28 +327,30 @@
     }
 
     .slide-7 h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 3rem;
       font-weight: 700;
-      color: #1a1a2e;
+      color: #fff;
       margin-bottom: 30px;
       line-height: 1.3;
     }
 
     .slide-7 .final-quote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 2rem;
       line-height: 1.7;
-      color: #0f3460;
+      color: #fff;
       font-style: italic;
+      font-weight: 400;
       margin-bottom: 40px;
     }
 
     .slide-7 .cta {
-      font-family: 'Cinzel', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.3rem;
-      color: #1a1a2e;
+      color: #fff;
       letter-spacing: 2px;
+      font-weight: 600;
       margin-top: 30px;
     }
 
@@ -375,7 +417,7 @@
           <div class="slide-icon">🌙</div>
           <h3 class="slide-title">Living by<br/>Divine Timing</h3>
           <p class="slide-text">The spiritual masters understood what science now confirms: our bodies are designed to flow with natural rhythms. Prayer times align with the sun's journey—a map for harmonious living.</p>
-          <p class="slide-text" style="font-style: italic; color: #d4af37; margin-top: 30px;">"How many nights have you spent without sleep for the love of God?"</p>
+          <p class="slide-text" style="font-style: italic; color: var(--accent); margin-top: 30px; font-weight: 600;">"How many nights have you spent without sleep for the love of God?"</p>
           <p class="slide-footer">— Sheikh Muzaffer Ozak</p>
         </div>
         <button class="download-btn" onclick="downloadSlide('slide-3', 'muzaffer_ozak_slide_3.png')">
@@ -389,7 +431,7 @@
           <div class="slide-icon">🍃</div>
           <h3 class="slide-title">Breathe Divine<br/>Breath</h3>
           <p class="slide-text">Fresh air and proper rest are not luxuries—they are essential practices for maintaining spiritual vitality. The body is a sacred vessel that must be honored.</p>
-          <p class="slide-text" style="margin-top: 30px; color: #f4e4c1; font-style: italic;">Sleep under the stars, wake with the dawn, and breathe with intention.</p>
+          <p class="slide-text" style="margin-top: 30px; color: var(--text); font-style: italic;">Sleep under the stars, wake with the dawn, and breathe with intention.</p>
           <p class="slide-footer">Sufi Wisdom</p>
         </div>
         <button class="download-btn" onclick="downloadSlide('slide-4', 'muzaffer_ozak_slide_4.png')">
@@ -431,7 +473,7 @@
           <h2>Walk the Path<br/>of Love</h2>
           <p class="final-quote">"Love is the wine. By the hand of the wine pourer, the glass—the dervish—is filled."</p>
           <p class="cta">✦ SHEIKH MUZAFFER OZAK ✦</p>
-          <p style="margin-top: 40px; font-size: 1.2rem; font-family: 'Cormorant Garamond', serif; color: #0f3460;">
+          <p style="margin-top: 40px; font-size: 1.2rem; font-family: 'Inter', sans-serif; color: #fff; font-weight: 400;">
             Follow for more spiritual wisdom<br/>from the masters
           </p>
         </div>
