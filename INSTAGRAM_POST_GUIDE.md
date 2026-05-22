@@ -66,23 +66,35 @@ The carousel connects ancient Sufi teachings with modern wellness topics:
 ## 🎨 Design Specifications
 
 ### Color Palette (Brandbook)
-- **Primary Gold**: #d4af37 (Divine, sacred, traditional Islamic art)
-- **Accent Cream**: #f4e4c1 (Soft, elegant, readable)
-- **Deep Navy**: #0f3460 (Contemplative, night, spiritual depth)
-- **Rich Black**: #1a1a2e (Grounding, mystery)
-- **Teal Accent**: #16a085 (Life, renewal, balance)
+- **Primary Blue (Instagram Accent)**: #0095f6 (buttons, links, highlights)
+- **Story Gradient**: Instagram rainbow gradient (final CTA slide, download all button)
+- **Text Primary**: #0a0a0a / #fafafa (light/dark mode)
+- **Text Muted**: #737373 / #a8a8a8 (light/dark mode)
+- **Text Faint**: #a8a8a8 / #737373 (light/dark mode)
+- **Border**: #dbdbdb / #262626 (light/dark mode)
+- **Border Soft**: #efefef / #1c1c1c (light/dark mode)
+- **Background**: #ffffff / #000000 (light/dark mode)
+- **Background Soft**: #fafafa / #121212 (light/dark mode)
+
+### Spiritual Theme Colors
+- **Gold Accent**: #d4af37 (used sparingly for title slide ornamentation)
+- **Navy Background**: #0f3460, #1a1a2e (title slide only)
+- These maintain the Sufi/spiritual aesthetic while the content slides use Instagram's clean white design
 
 ### Typography
-- **Headings**: Playfair Display (elegant serif, spiritual gravitas)
-- **Body/Quotes**: Cormorant Garamond (readable, classical)
-- **Accents**: Cinzel (all-caps, sacred text feeling)
+- **All Text**: Inter (Instagram's official font)
+  - Headings: Inter 700 (bold)
+  - Body: Inter 400 (regular)
+  - Quotes: Inter 400 italic
+  - Accents: Inter 600 (semibold)
 
 ### Layout Principles
 - **1080 x 1350px** per slide (Instagram carousel standard)
-- **Ornamental borders** inspired by Ottoman manuscript illumination
-- **Generous whitespace** for contemplative reading
-- **Centered alignment** to honor traditional Islamic calligraphy layouts
-- **High contrast** for accessibility and mobile readability
+- **Clean borders** inspired by Instagram's UI (subtle, minimal)
+- **Generous whitespace** for mobile readability
+- **Centered alignment** for optimal Instagram viewing
+- **High contrast** for accessibility (WCAG AA compliant)
+- **Dark mode support** via CSS prefers-color-scheme
 
 ---
 
@@ -90,38 +102,56 @@ The carousel connects ancient Sufi teachings with modern wellness topics:
 
 ### Slide 1: Title Slide
 **Purpose:** Hook attention, establish brand  
-**Elements:** Ornamental arcs, main title, author credit  
+**Elements:** Navy background with gold ornamental arcs, main title, author credit  
+**Design:** Spiritual aesthetic with gold accents on dark navy
 **Effect:** Elegant, inviting, sets contemplative tone
+
+### Slide 2-6: Content Slides
+**Design:** Clean white background with subtle border frames (Instagram style)
+**Typography:** Inter font throughout
+**Colors:** Black text, muted gray for body, Instagram blue for footer
+**Effect:** Professional, modern, Instagram-native look
+
+### Slide 7: Call-to-Action
+**Design:** Instagram's signature rainbow gradient background
+**Typography:** White text on gradient
+**Purpose:** Stand out in feed, inspire action, drive follows
+**Effect:** Vibrant, eye-catching, unmistakably Instagram
 
 ### Slide 2: Deep Hygiene & Purity
 **Quote:** "Love is to see what is good and beautiful in everything..."  
 **Theme:** Spiritual and physical cleanliness (tahara)  
-**Icon:** ✨ (sparkle - representing purification)  
+**Icon:** ✨ (sparkle - representing purification)
+**Design:** White background, Instagram blue footer
 
 ### Slide 3: Circadian Rhythms  
 **Quote:** "How many nights have you spent without sleep for the love of God?"  
 **Theme:** Living in harmony with divine timing (prayer times)  
 **Icon:** 🌙 (crescent moon - Islamic symbol)
+**Design:** White background, Instagram blue accent quote
 
 ### Slide 4: Fresh Air & Sleep
 **Theme:** The body as sacred vessel requiring care  
 **Message:** Natural elements as spiritual medicine  
 **Icon:** 🍃 (leaf - representing breath and nature)
+**Design:** White background, clean layout
 
 ### Slide 5: Early Rising
 **Quote:** "When human beings remember God, angels are born"  
 **Theme:** Fajr prayer and the blessed dawn hours  
 **Icon:** 🌅 (sunrise - new beginnings)
+**Design:** White background, prominent quote
 
 ### Slide 6: Nervous Exhaustion
 **Theme:** Modern stress and spiritual remedies  
 **Message:** Connection to Source as the ultimate healer  
-**Icon:** 🕊️ (dove - peace, Holy Spirit, surrender)
+**Icon:** 🕊️ (dove - peace, surrender)
+**Design:** White background, balanced text
 
 ### Slide 7: Call-to-Action
 **Quote:** "Love is the wine. By the hand of the wine pourer, the glass—the dervish—is filled"  
 **Purpose:** Inspire action, drive follows  
-**Design:** Gold background (stands out in feed)
+**Design:** Instagram rainbow gradient (stands out in feed)
 
 ---
 
